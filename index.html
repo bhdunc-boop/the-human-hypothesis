@@ -1,13 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The Human Hypothesis" />
-    <title>The Human Hypothesis</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Human Hypothesis — a living inquiry into consciousness, culture, technology, and the fragile art of becoming.">
+  <meta name="theme-color" content="#f3f0e8">
+  <title>The Human Hypothesis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header shell">
+    <a class="wordmark" href="#top" aria-label="The Human Hypothesis home">The Human Hypothesis</a>
+    <nav aria-label="Primary navigation">
+      <a href="#inquiry">Inquiry</a><a href="#notes">Field Notes</a><a href="#contributors">Contributors</a><a href="#about">About</a>
+    </nav>
+    <a class="button button--line" href="#join">Join the inquiry <span aria-hidden="true">→</span></a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </header>
+  <div id="mobile-nav" class="mobile-nav" hidden>
+    <a href="#inquiry">Inquiry</a><a href="#notes">Field Notes</a><a href="#contributors">Contributors</a><a href="#about">About</a><a href="#join">Join the inquiry</a>
+  </div>
+
+  <main id="top">
+    <section class="hero shell numbered" aria-labelledby="hero-title">
+      <span class="number">01</span>
+      <div class="hero__copy">
+        <h1 id="hero-title">What if being human is an <em>unfinished</em> hypothesis?</h1>
+        <p>A living inquiry into consciousness, culture, technology, and the fragile art of becoming.</p>
+        <div class="actions"><a class="button button--coral" href="#inquiry">Begin with the question <span aria-hidden="true">→</span></a><a class="text-link" href="#notes">Read the latest field note <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="hero__art" role="img" aria-label="A contemplative human profile merging with organic branching forms"></div>
+    </section>
+
+    <section id="inquiry" class="manifesto shell numbered section">
+      <span class="number">02</span>
+      <div>
+        <h2>We are not a conclusion.</h2>
+        <p class="lede">To be human is not a fixed state, but a continuing experiment. We are a temporary arrangement of matter, meaning, and relationship—still becoming, still questioning, still capable of surprise.</p>
+        <p>The Human Hypothesis is an open space for rigorous inquiry and imaginative thought, where science, philosophy, culture, technology, and lived experience meet to ask better questions about what we are, and what we might yet become.</p>
+      </div>
+      <figure class="manifesto__image"><img src="/assets/threshold.svg" alt="A solitary figure standing at a vast threshold"><figcaption>Same questions.<br>Deeper humans.</figcaption></figure>
+    </section>
+
+    <section class="threads shell numbered section" aria-labelledby="threads-title">
+      <span class="number">03</span>
+      <div class="section-label" id="threads-title">Open research threads</div>
+      <div class="thread-grid">
+        <article><span>01</span><h3>The social animal</h3><p>How do we make meaning together? From tribal bonds to global systems, explore the forces that shape our social lives.</p><a href="#join" aria-label="Explore The social animal">→</a></article>
+        <article><span>02</span><h3>Tools that remake us</h3><p>From fire to AI, our tools extend our minds and alter our nature. What happens when the things we create, create us in return?</p><a href="#join" aria-label="Explore Tools that remake us">→</a></article>
+        <article><span>03</span><h3>The inner witness</h3><p>What is consciousness? How do we know what it is like to be us? A closer look at perception, selfhood, and the mystery within.</p><a href="#join" aria-label="Explore The inner witness">→</a></article>
+      </div>
+    </section>
+
+    <section id="notes" class="field-note shell numbered section">
+      <span class="number">04</span>
+      <div class="field-note__intro"><span class="section-label">Featured field note</span><h2>Can attention still belong to us?</h2><p>In an age of infinite distraction, attention is more than a mental resource—it may be the last truly personal space we have.</p><div class="byline"><span class="avatar">EP</span><span>By Elena Park<br><time datetime="2026-10-16">16 October 2026</time></span></div></div>
+      <blockquote>“Attention is not just what we give to the world, but what allows a world to appear at all.”</blockquote>
+      <div class="field-note__art" aria-hidden="true"></div>
+    </section>
+
+    <section id="contributors" class="participate shell numbered section">
+      <span class="number">05</span>
+      <div><span class="section-label">Participate</span><h2>Add your evidence</h2><p>This is a shared inquiry. Different perspectives help us see more clearly.</p></div>
+      <ol><li><span>01</span><strong>Share a question</strong><p>What do you find yourself wondering about?</p></li><li><span>02</span><strong>Offer a perspective</strong><p>Bring an insight, experience, or counterpoint.</p></li><li><span>03</span><strong>Point to a resource</strong><p>A book, study, artwork, or idea worth exploring.</p></li></ol>
+    </section>
+
+    <section id="join" class="join shell numbered section">
+      <span class="number">06</span>
+      <div><span class="section-label">Stay in touch</span><h2>Stay with the question</h2><p>Field notes, new inquiries, and invitations, in your inbox.</p></div>
+      <form id="join-form"><label class="sr-only" for="email">Your email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button class="button button--blue" type="submit">Join the inquiry <span aria-hidden="true">→</span></button><p class="form-note">No noise. Just thoughtful updates.</p></form>
+    </section>
+  </main>
+
+  <footer id="about" class="site-footer shell"><span class="wordmark">The Human Hypothesis</span><nav aria-label="Footer navigation"><a href="#inquiry">Inquiry</a><a href="#notes">Field Notes</a><a href="#contributors">Contributors</a><a href="#about">About</a></nav><span>A more curious future, together.</span></footer>
+  <div class="toast" role="status" aria-live="polite" hidden>Thank you. The inquiry begins here.</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>

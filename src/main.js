@@ -1,9 +1,1 @@
-import './styles.css';
-
-document.querySelector('#app').innerHTML = `
-  <main class="holding-page">
-    <p class="wordmark">The Human Hypothesis</p>
-    <h1>Something human is taking shape.</h1>
-    <p>Our inquiry begins soon.</p>
-  </main>
-`;
+const menu=document.querySelector('.menu');const mobile=document.querySelector('#mobile-nav');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobile.hidden=open});mobile.addEventListener('click',()=>{mobile.hidden=true;menu.setAttribute('aria-expanded','false')});document.querySelector('#join-form').addEventListener('submit',e=>{e.preventDefault();const toast=document.querySelector('.toast');toast.hidden=false;e.currentTarget.reset();setTimeout(()=>toast.hidden=true,4000)});

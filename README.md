@@ -1,29 +1,13 @@
 # The Human Hypothesis
 
-Infrastructure scaffold for `thehumanhypothesis.com`.
+Static editorial landing page for `thehumanhypothesis.com`.
 
-## Stack
+## Local preview
 
-- GitHub for source control
-- Vite for the frontend build
-- Cloudflare Pages for deployment
-- Cloudflare DNS and SSL
-- IONOS as the domain registrar
-
-## Commands
-
-```bash
-npm install
-npm run dev
-npm run build
-npm run preview
+```sh
+python3 -m http.server 4173 -d .
 ```
 
 ## Deployment
 
-Cloudflare Pages should use:
-
-- Production branch: `main`
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Node.js version: `22`
+The site is intended for Cloudflare Pages with `/` as the build output directory and no build command.
