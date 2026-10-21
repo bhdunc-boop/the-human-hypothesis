@@ -1,1 +1,11 @@
-const menu=document.querySelector('.menu');const mobile=document.querySelector('#mobile-nav');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobile.hidden=open});mobile.addEventListener('click',()=>{mobile.hidden=true;menu.setAttribute('aria-expanded','false')});document.querySelector('#join-form').addEventListener('submit',e=>{e.preventDefault();const toast=document.querySelector('.toast');toast.hidden=false;e.currentTarget.reset();setTimeout(()=>toast.hidden=true,4000)});
+const form = document.querySelector('#join-form');
+const toast = document.querySelector('.toast');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  form.reset();
+  toast.hidden = false;
+  window.setTimeout(() => {
+    toast.hidden = true;
+  }, 3500);
+});
